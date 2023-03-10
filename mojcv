@@ -1,0 +1,46 @@
+from pathlib import Path
+
+import streamlit as st
+
+#--- PATH SETTINGS ---
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+css_file = current_dir / "styles" / "main.css"
+resume_file = current_dir / "assets" / "CV.pdf"
+profile_pic = current_dir / "assets" / "profile-pic.png"
+
+
+#--- GENERAL SETTINGS ---
+PAGE_TITLE = "Digitalni CV Timur Puzo"
+PAGE_ICON = ":wawe:"
+NAME = "Timur Puzo"
+DESCRIPTION = """
+Učenik srednje ekonomske škole Sarajevo, imam osamnaest godina i živim u Sarajevu.
+"""
+EMAIL = "timurpuzo90@gmail.com"
+SOCIAL_MEDIA = {
+"Github": "https://github.com/timurpuzo04"
+}
+
+
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+
+
+st.title("Ovo je moj CV!")
+
+st.write ("Moje radno iskustvo je da sam bio promatrač u izborima i volontiram u Dječijem domu Bjelave.")
+
+st.write ("Školovao sam se u Šestoj osnovnoj školi, trenutno sam učenik Srednje ekonomske škole Sarajevo.")
+
+st.write ("Znanje engleskoj je C1, a znanje njemačkog je A2.")
+
+st.write ("Moji hobiji su crtanje, učenje programiranja i treniranje kada imam vremena")
+
+st.write ("Planiram studirati na IUS-u ili FIT-u i planiram širiti znanje programiranja u skorijoj budućnosti")
+
+st.write("Pošto nisam mogao ubaciti sliku u program, pokušavao sam razne metode jer imam mnogo problema sa programiranjem, smislio sam na ovaj način da ubacim sliku:")
+
+st.write ("Slika: file:///C:/Users/Amir/Downloads/picture.png.jpg")
+
+st.write ("Github: https://github.com/timurpuzo04")
+
+st.write ("EMAIL: timurpuzo90@gmail.com")
